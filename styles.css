@@ -1,0 +1,586 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  color: #1f2933;
+  background: #f9fafb;
+}
+
+
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+
+  /* IMAGEN DE FONDO */
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 25px 20px 15px;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.35)
+  );
+
+  z-index: 1;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin-top: -20px;
+}
+
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+
+.hero-content p {
+  color: #eaeaea;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+}
+
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.section {
+  padding: 80px 20px;
+}
+
+.section.light {
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  text-align: center;
+  font-weight: 500;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.appointment-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #C9A24D;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+
+.btn-primary {
+  background: linear-gradient(135deg, #C9A24D, #A8842C);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #A8842C, #8F6F22);
+}
+
+
+.btn-secondary {
+  background: #25d366;
+  color: white;
+  margin-top: 15px;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #0f172a;
+  color: white;
+  margin-top: 60px;
+}
+
+
+/* ==== NAVBAR HORIZONTAL ==== */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-top: -50px;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo / nombre */
+.nav-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #C9A24D;
+}
+
+/* Lista del menú */
+.nav-menu {
+  list-style: none;
+  display: flex;          /* 🔥 ESTO LOS PONE HORIZONTALES */
+  gap: 32px;              /* espacio entre items */
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+.nav-menu li a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  transition: color 0.3s ease;
+}
+
+
+.doctoras {
+  background: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* GRID PARA 2 DOCTORAS */
+.doctoras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CARD INDIVIDUAL */
+.doctora-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px 35px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover elegante */
+.doctora-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.10);
+}
+
+/* Imagen */
+
+.doctora-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  border: 5px solid #c9a24d;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Nombre */
+.doctora-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #1f1f1f;
+}
+
+/* Especialidad */
+.doctora-card .especialidad {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #C9A24D;
+  margin-bottom: 14px;
+}
+
+/* Descripción */
+.doctora-card .descripcion {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+
+/* ===== BLOQUE DOCTORAS JUNTAS (EDITORIAL) ===== */
+.doctoras-equipo {
+  margin-top: 70px;
+  text-align: center;
+}
+
+/* IMAGEN CENTRAL */
+.equipo-imagen img {
+  width: 220px;
+  height: 220px;
+
+  object-fit: cover;
+  object-position: center top;
+
+  border-radius: 50%;
+  border: 4px solid #c9a24d;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* TEXTO DE MARCA */
+.equipo-texto {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  color: #c9a24d;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;           /* 👈 lado derecho */
+  bottom: 40px;          /* 👈 altura desde abajo */
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #1f1f1f;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: #000000;
+}
+
+/* Ícono */
+.whatsapp-float img {
+  width: 26px;
+  height: 26px;
+}
+
+/* OCULTAR TEXTO EN MÓVIL */
+@media (max-width: 640px) {
+  .whatsapp-text {
+    display: none;
+  }
+
+  .whatsapp-float {
+    padding: 14px;
+    border-radius: 50%;
+  }
+}
+
+
+/* ===== SECCIÓN CITAS ===== */
+#citas {
+  background: #f8f8f8;
+}
+
+
+/* ===== CONTACTO ===== */
+.contacto {
+  background: #ffffff;
+}
+
+.contacto-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: #4b4b4b;
+}
+
+/* GRID INFO */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contacto-item h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #1f2933;
+}
+
+.contacto-item p {
+  font-size: 0.95rem;
+  color: #4b4b4b;
+}
+
+/* REDES */
+.contacto-redes {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.contacto-redes a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #c9a24d;
+  border-bottom: 1px solid transparent;
+}
+
+.contacto-redes a:hover {
+  border-color: #c9a24d;
+}
+
+/* MAPA */
+.contacto-mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 20px;
+}
+
+/* CONTENEDOR GENERAL */
+#citas .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TÍTULO Y TEXTO CENTRADOS */
+#citas h2,
+#citas p {
+  text-align: center;
+}
+
+/* FORMULARIO (CENTRADO REAL) */
+.appointment-form {
+  width: 100%;
+  max-width: 520px;              /* 🔥 más angosto y elegante */
+  margin-top: 40px;
+
+  background: #ffffff;
+  padding: 48px 42px;
+  border-radius: 26px;
+
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.10);
+}
+
+/* GRUPOS */
+.form-group {
+  margin-bottom: 24px;
+}
+
+/* LABELS */
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+/* CAMPOS */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e3e3e3;
+  font-size: 0.95rem;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+/* FOCUS DORADO LUMINOUS */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c9a24d;
+  box-shadow: 0 0 0 3px rgba(201, 162, 77, 0.18);
+}
+
+/* TEXTAREA */
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* BOTÓN */
+.appointment-form .btn-primary {
+  width: 100%;
+  margin-top: 28px;
+
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #c9a24d, #a8842c);
+  color: #ffffff;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER BOTÓN */
+.appointment-form .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 45px rgba(168, 132, 44, 0.45);
+  background: linear-gradient(135deg, #a8842c, #8f6f22);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .appointment-form {
+    padding: 36px 26px;
+    max-width: 92%;
+  }
+}
+
+/* Hover */
+.nav-menu li a:hover {
+  color: #0d9488;         /* verde clínico */
+}
+
+
+/* ===== ANIMACIONES SCROLL ===== */
+.scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes opcionales */
+.scroll-left {
+  transform: translateX(-40px);
+}
+
+.scroll-right {
+  transform: translateX(40px);
+}
+
+
