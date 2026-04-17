@@ -286,28 +286,37 @@ h2 {
     display: flex;
   }
 
+
+/* ===== FIX DEFINITIVO MENÚ MÓVIL ===== */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: flex !important;
+  }
+
   .nav-menu {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-
+    display: none !important;
     flex-direction: column;
-    background: #ffffff;
 
+    position: absolute;
+    top: 64px;
+    right: 16px;
+
+    width: 220px;
+    background: #ffffff;
     padding: 18px;
     gap: 14px;
-    width: 220px;
 
     border-radius: 16px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-
-    display: none;
+    z-index: 1000;
   }
 
   .nav-menu.active {
-    display: flex;
+    display: flex !important;
   }
 }
+
 
 /* Líneas */
 .nav-toggle span {
