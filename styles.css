@@ -284,7 +284,7 @@ h2 {
 
   /* OCULTAR MENÚ HORIZONTAL */
   .nav-menu {
-    display: none !important;
+    display: none;
     position: fixed;
     top: 70px;
     right: 16px;
