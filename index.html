@@ -38,12 +38,12 @@
 
 
 </header>
+
 <nav class="navbar">
     <div class="nav-container">
         <a href="#inicio" class="nav-logo">
             Luminous Odontología
         </a>
-
 
         <button class="nav-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
             <span></span>
@@ -51,16 +51,16 @@
             <span></span>
         </button>
 
-
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="navMenu">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#LasDoctoras">Profesionales</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#citas">Agenda Tu Citas</a></li>
-            <li><a href="#contactenos">Contactenos</a></li>
+            <li><a href="#contactenos">Contáctenos</a></li>
         </ul>
     </div>
 </nav>
+
 
 
 <section id="inicio" class="section inicio">
@@ -348,11 +348,21 @@
 </script>
 
 
+
 <script>
     function toggleMenu() {
       document.getElementById("navMenu").classList.toggle("active");
     }
 </script>
+
+<script>
+    document.querySelectorAll(".nav-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navMenu").classList.remove("active");
+      });
+    });
+</script>
+
 
 <footer class="footer">
     <p>© 2026 Luminous · Clínica Odontológica</p>
