@@ -216,14 +216,16 @@ h2 {
 }
 
 
-/* ==== NAVBAR HORIZONTAL ==== */
+/* ============================= */
+/* NAVBAR GLOBAL */
+/* ============================= */
+
 .navbar {
   background: #ffffff;
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  margin-top: -50px;
+  z-index: 3000;
 }
 
 .nav-container {
@@ -236,7 +238,7 @@ h2 {
   justify-content: space-between;
 }
 
-/* Logo / nombre */
+/* LOGO */
 .nav-logo {
   font-size: 1.1rem;
   font-weight: 700;
@@ -244,16 +246,16 @@ h2 {
   color: #C9A24D;
 }
 
-/* Lista del menú */
+/* ============================= */
+/* MENÚ DESKTOP */
+/* ============================= */
+
 .nav-menu {
+  display: flex;                  /* ✅ visible en desktop */
+  gap: 24px;
   list-style: none;
-  display: flex;          /* 🔥 ESTO LOS PONE HORIZONTALES */
-  gap: 32px;              /* espacio entre items */
-  margin: 0;
-  padding: 0;
 }
 
-/* Links */
 .nav-menu li a {
   text-decoration: none;
   font-size: 0.95rem;
@@ -262,65 +264,94 @@ h2 {
   transition: color 0.3s ease;
 }
 
+.nav-menu li a:hover {
+  color: #C9A24D;
+}
 
 /* ============================= */
-/* BOTÓN HAMBURGUESA (FINAL) */
+/* BOTÓN HAMBURGUESA */
 /* ============================= */
 
 .nav-toggle {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-
-  width: 44px;
-  height: 44px;
-
-  background: #ffffff;
-  border: none;
-  border-radius: 50%;
-
-  display: none; /* solo se muestra en móvil */
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  z-index: 9999;
-
-  cursor: pointer;
+  display: none;                  /* ❌ NO en desktop */
 }
 
-/* Las 3 rayitas */
-.nav-toggle span {
-  width: 22px;
-  height: 3px;
-  margin: 0 auto;
+/* ============================= */
+/* MOBILE */
+/* ============================= */
 
-  background-color: #c9a24d; /* dorado Luminous */
-  border-radius: 3px;
-
-  transition: all 0.3s ease;
-}
-
-/* Mostrar solo en móvil */
 @media (max-width: 768px) {
-  .nav-toggle {
+
+  /* OCULTAR MENÚ HORIZONTAL */
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 16px;
+
+    flex-direction: column;
+    width: 220px;
+    padding: 18px;
+    gap: 14px;
+
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    z-index: 4000;
+  }
+
+  /* MOSTRAR MENÚ AL ABRIR */
+  .nav-menu.active {
     display: flex;
+  }
+
+  /* MOSTRAR BOTÓN HAMBURGUESA */
+  .nav-toggle {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+
+    width: 44px;
+    height: 44px;
+
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 9999;
+    cursor: pointer;
+  }
+
+  /* LAS 3 RAYITAS */
+  .nav-toggle span {
+    width: 22px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #c9a24d;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* ANIMACIÓN A X */
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 }
 
-/* Animación a X cuando está activo */
-.nav-toggle.active span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.nav-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle.active span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
 
 
 .doctoras {
