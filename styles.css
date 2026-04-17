@@ -301,7 +301,7 @@ h2 {
   }
 
   /* MOSTRAR MENÚ AL ABRIR */
-nav-menu.active {
+.nav-menu.active {
     display: flex;
     position: fixed;
     top: 70px;
