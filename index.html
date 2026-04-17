@@ -10,13 +10,32 @@
 <body>
 
 <header>
+
     <section class="hero">
+
+        <video
+                class="hero-bg-video"
+                autoplay
+                muted
+                loop
+                playsinline>
+            <source src="videos/luminous-intro.mp4" type="video/mp4" />
+            Tu navegador no soporta video HTML5.
+        </video>
+
+        <div class="hero-overlay"></div>
+
         <div class="hero-content">
+
             <h1>Diseñamos sonrisas con precisión y confianza</h1>
+
             <p>Odontología integral y estética con atención personalizada</p>
+
             <a href="#citas" class="btn-primary">Agenda tu cita</a>
         </div>
-    </section>
+
+    </section
+
 
 </header>
 <nav class="navbar">
@@ -27,7 +46,7 @@
 
         <ul class="nav-menu">
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#LasDoctoras">Las Doctoras</a></li>
+            <li><a href="#LasDoctoras">Profesionales</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#citas">Agenda Tu Citas</a></li>
             <li><a href="#contactenos">Contactenos</a></li>
@@ -65,7 +84,7 @@
 <section id="LasDoctoras" class="section doctoras">
     <div class="container">
 
-        <h2 class="section-title">Las Doctoras</h2>
+        <h2 class="section-title">Profesionales</h2>
 
         <div class="doctoras-grid">
 
@@ -92,16 +111,32 @@
         </div>
 
 
-        <div class="doctoras-equipo scroll">
-            <div class="equipo-imagen">
-                <img src="images/Doctoras.jpg" alt="Equipo Luminous">
+
+        <div class="video-vertical-section">
+
+            <div class="video-vertical-wrapper">
+
+                <div class="video-audio-overlay" onclick="activarAudio(this)">
+                    🔊 Tocar para escuchar
+                </div>
+
+                <video autoplay muted loop playsinline>
+                    <source src="videos/Luminous_Video.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+
             </div>
 
-            <p class="equipo-texto">
-                LUMINOUS · Odontología Integral & Estética
+            <p class="video-vertical-text">
+                Conoce nuestro consultorio y el equipo que cuidará tu sonrisa
             </p>
 
         </div>
+
+
+
+
+    </div>
 
 
     </div>
@@ -291,6 +326,17 @@
     );
 
     scrollElements.forEach((el) => observer.observe(el));
+</script>
+
+
+<script>
+    function activarAudio(btn) {
+      const video = btn.parentElement.querySelector("video");
+
+      video.muted = false;
+      video.volume = 1;
+      btn.style.display = "none";
+    }
 </script>
 
 

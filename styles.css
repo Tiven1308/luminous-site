@@ -11,25 +11,43 @@ body {
   background: #f9fafb;
 }
 
-
-
 .hero {
   position: relative;
-  min-height: 80vh;
-
-  /* IMAGEN DE FONDO */
-  background-image: url("images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  min-height: 65vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
-  padding: 25px 20px 15px;
 }
+
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 15, 10, 0.65),
+    rgba(20, 15, 10, 0.45)
+  );
+  z-index: 2;
+}
+
+
+.hero-logo {
+  width: 90px;
+  margin-bottom: 20px;
+}
+
 
 
 .hero::before {
@@ -47,12 +65,15 @@ body {
 }
 
 
+
 .hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 850px;
-  margin-top: -20px;
+  z-index: 3;
+  max-width: 900px;
+  padding: 20px;
+  color: white;
 }
+
 
 
 .hero-content h1 {
@@ -328,6 +349,159 @@ h2 {
 
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
 }
+
+
+/* ===== VIDEO VERTICAL PROFESIONALES ===== */
+.video-vertical-section {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CONTENEDOR VERTICAL (9:16) */
+
+.video-vertical-wrapper {
+  position: relative; /* 🔑 CLAVE */
+  width: 320px;
+  height: 570px;
+
+  border-radius: 28px;
+  overflow: hidden;
+
+  border: 3px solid #c9a24d;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+}
+
+
+/* VIDEO */
+.video-vertical-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block
+
+}
+
+/* TEXTO */
+.video-vertical-text {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4b4b4b;
+  text-align: center;
+  max-width: 320px;
+}
+
+
+
+
+.audio-toggle {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: rgba(255, 255, 255, 0.85);
+  color: #1f1f1f;
+
+  border: 1px solid rgba(201, 162, 77, 0.6); /* dorado */
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  z-index: 10;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+
+.video-audio-overlay {
+  position: absolute;
+  bottom: 14px;               /* 👈 ABAJO SOBRE EL VIDEO */
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f1f1f;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  border: 1px solid #c9a24d;  /* dorado luminous */
+  cursor: pointer;
+
+  z-index: 5;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+  transition: all 0.3s ease;
+}
+
+.video-audio-overlay:hover {
+  background: #c9a24d;
+  color: #ffffff;
+}
+
+.audio-toggle.icon-only {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  padding: 0;
+
+  background: rgba(0,0,0,0.55);
+  color: #ffffff;
+  border: none;
+
+  font-size: 0.9rem;
+}
+
+/* Hover elegante */
+.audio-toggle:hover {
+  background: #c9a24d;
+  color: #ffffff;
+}
+
+/* Icono */
+.audio-icon {
+  font-size: 0.8rem;
+}
+
+/* SOLO icono en móvil */
+@media (max-width: 480px) {
+  .audio-text {
+    display: none;
+  }
+}
+
+
+
+
+/* TEXTO */
+.video-texto {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4b4b4b;
+}
+
 
 /* TEXTO DE MARCA */
 .equipo-texto {
