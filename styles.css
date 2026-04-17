@@ -263,6 +263,63 @@ h2 {
 }
 
 
+* ==== BOTÓN HAMBURGUESA ==== */
+.nav-toggle {
+  display: none; /* solo móvil */
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 26px;
+  height: 18px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+
+    flex-direction: column;
+    background: #ffffff;
+
+    padding: 18px;
+    gap: 14px;
+    width: 220px;
+
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+/* Líneas */
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #c9a24d; /* dorado luminous */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
 .doctoras {
   background: #ffffff;
   padding-top: 100px;
