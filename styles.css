@@ -284,7 +284,7 @@ h2 {
 
   /* OCULTAR MENÚ HORIZONTAL */
   .nav-menu {
-    display: none;
+    display: none !important;
     position: fixed;
     top: 70px;
     right: 16px;
@@ -301,9 +301,23 @@ h2 {
   }
 
   /* MOSTRAR MENÚ AL ABRIR */
-  .nav-menu.active {
+nav-menu.active {
     display: flex;
+    position: fixed;
+    top: 70px;
+    right: 16px;
+
+    flex-direction: column;
+    width: 220px;
+    padding: 18px;
+    gap: 14px;
+
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    z-index: 4000;
   }
+
 
   /* MOSTRAR BOTÓN HAMBURGUESA */
   .nav-toggle {
