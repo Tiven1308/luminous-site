@@ -347,29 +347,21 @@
     }
 </script>
 
-
-
-
 <script>
     function toggleMenu() {
       const menu = document.getElementById("navMenu");
+      const toggle = document.querySelector(".nav-toggle");
+
       menu.classList.toggle("active");
+      toggle.classList.toggle("active");
     }
-</script>
-
-<script>
-    document.querySelectorAll(".nav-menu a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navMenu").classList.remove("active");
-      });
-    });
-</script>
 
 
-<footer class="footer">
-    <p>© 2026 Luminous · Clínica Odontológica</p>
-</footer>
 
-</body>
-</html>
+    <footer class="footer">
+        <p>© 2026 Luminous · Clínica Odontológica</p>
+    </footer>
+
+    </body>
+    </html>
 
