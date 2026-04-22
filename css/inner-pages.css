@@ -1,0 +1,197 @@
+
+/* ============================= */
+/* CONTENEDOR GENERAL */
+/* ============================= */
+
+.cases-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 80px;
+  padding: 100px 60px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+/* ============================= */
+/* PERFIL DOCTORA */
+/* ============================= */
+
+.doctor-profile {
+  position: sticky;
+  top: 120px;
+  text-align: center;
+}
+
+.doctor-profile img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #c9a24d;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  margin-bottom: 24px;
+}
+
+.doctor-profile h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.doctor-profile p {
+  font-weight: 600;
+  color: #c9a24d;
+}
+
+
+/* ============================= */
+/* ZONA DE VIDEOS */
+/* ============================= */
+
+
+/* ============================= */
+/* CASOS REALES – EXPERIENCIA */
+/* ============================= */
+
+.video-case {
+  margin-bottom: 120px; /* mucho aire, lujo */
+}
+
+/* Video protagonista */
+.video-case video {
+  width: 100%;
+  height: 420px;                /* GRANDE */
+  border-radius: 28px;
+  object-fit: cover;
+
+  box-shadow: 0 40px 100px rgba(0,0,0,0.25);
+
+  transition: transform 0.6s ease;
+}
+
+/* Movimiento sutil */
+.video-case:hover video {
+  transform: scale(1.02);
+}
+
+/* Texto debajo del video */
+.video-case-text {
+  margin-top: 22px;
+  max-width: 700px;
+}
+
+.video-case-text h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.video-case-text p {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .video-case video {
+    height: 300px;
+    border-radius: 22px;
+  }
+
+  .video-case {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-case video {
+    height: 240px;
+  }
+
+  .video-case-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .video-case-text p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ============================= */
+/* GALERÍA PACIENTES */
+/* ============================= */
+
+.patients-gallery {
+  padding: 80px 0 100px;
+  background: #fafafa;
+}
+
+.patients-gallery h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* Scroll elegante */
+.gallery-track {
+  display: flex;
+  gap: 24px;
+  padding: 0 60px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-track img {
+  width: 260px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+  scroll-snap-align: start;
+  transition: transform 0.4s ease;
+}
+
+.gallery-track img:hover {
+  transform: translateY(-8px);
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .cases-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 80px 20px;
+  }
+
+ .doctor-profile {
+    position: static;
+  }
+
+  .video-card video {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-card video {
+    height: 240px;
+  }
+
+  .gallery-track img {
+    width: 220px;
+    height: 260px;
+  }
+}
