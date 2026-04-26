@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Casos reales | Luminous</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/page-real-cases.css">
+    <link rel="stylesheet" href="css/page-about-me.css">
+</head>
+
+<body>
+
+<header>
+    
+<section class="hero-casos">
+
+  <div class="hero-casos-content">
+
+    <!-- Imagen -->
+    <div class="hero-image">
+      <img src="images/Hero_Lady_Casos.jpg" alt="Luminous Odontología Especializada">
+    </div>
+
+    
+ <div class="hero-text">
+      <h1>Detrás de cada sonrisa, hay una historia</h1>
+
+      <p class="hero-subtitle">
+        Vocación, precisión y estética natural
+      </p>
+
+      <p class="hero-description">
+        Mi compromiso es acompañar a cada paciente con tratamientos personalizados,
+        enfocados en la armonía facial, la funcionalidad y resultados que se sienten
+        tan naturales como auténticos.
+      </p>
+
+      <a href="#sobre-mi"
+         class="hero-cta">
+        Conoce mi enfoque →
+      </a>
+    </div>
+
+  </div>
+
+
+</section>
+
+</header>
+
+<section class="cases-editorial">
+
+<a href="index.html" class="back-home-float">
+  ← Volver al inicio
+</a>
+
+       
+<section id="sobre-mi" class="about-doctor">
+
+  <div class="about-doctor-content">
+
+    <!-- VIDEO -->
+     <div class="video-vertical-wrapper">
+
+                <div class="video-audio-overlay" onclick="activarAudio(this)">
+                    🔊 Tocar para escuchar
+                </div>
+
+                <video autoplay muted loop playsinline>
+                    <source src="videos/Luminous_Video.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+
+            </div>
+
+    <!-- TEXTO -->
+    <div class="about-text">
+
+      <h2>Mi forma de entender la odontología</h2>
+
+      <p>
+        Cada sonrisa requiere atención, dedicación y criterio profesional.
+        Por eso, mi forma de trabajar se basa en escuchar a cada paciente, entender 
+        sus necesidades y ofrecer tratamientos personalizados que cuiden la salud oral, 
+        la estética y la funcionalidad en el tiempo
+      </p>
+
+      <ul class="about-values">
+        <li>✓ Tratamientos personalizados</li>
+        <li>✓ Estética natural y resultados armónicos</li>
+        <li>✓ Odontología integral y funcional</li>
+        <li>✓ Acompañamiento cercano al paciente</li>
+      </ul>
+
+      <a href="index.html#citas" class="hero-cta">
+        Agenda tu cita →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<script>
+    function activarAudio(btn) {
+      const video = btn.parentElement.querySelector("video");
+
+      video.muted = false;
+      video.volume = 1;
+      btn.style.display = "none";
+    }
+</script>
+
+<footer class="footer">
+        <p>© 2026 Luminous · Clínica Odontológica</p>
+    </footer>
+</body>
+</html>

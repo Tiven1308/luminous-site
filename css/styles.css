@@ -65,6 +65,13 @@ body {
 }
 
 
+.hero-content p,
+.hero-content .btn-primary {
+  position: relative;
+  top: 90px; /* ⬇ aquí bajas el bloque azul exactamente */
+}
+
+
 
 .hero-content {
   position: relative;
@@ -81,13 +88,16 @@ body {
   font-size: 2.1rem;
   font-weight: 600;
   margin-bottom: 16px;
+  margin-top: -80px;
 }
 
 
 .hero-content p {
   color: #eaeaea;
-  margin-bottom: 28px;
-  font-size: 0.95rem;
+  margin-bottom: 35px;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-top: 260px;
 }
 
 
@@ -97,8 +107,9 @@ body {
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   margin-bottom: 30px;
+  
 }
 
 .section {

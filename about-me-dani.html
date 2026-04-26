@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Casos reales | Luminous</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/page-real-cases.css">
+    <link rel="stylesheet" href="css/page-about-me.css">
+</head>
+
+<body>
+
+<header>
+    
+<section class="hero-casos">
+
+  <div class="hero-casos-content">
+
+    <!-- Imagen -->
+    <div class="hero-image">
+      <img src="images/Hero_Dani_Casos.jpg" alt="Luminous Odontología Especializada">
+    </div>
+
+    
+ <div class="hero-text">
+      <h1>Cuidar sonrisas es una vocación</h1>
+
+      <p class="hero-subtitle">
+        Confianza y resultados que se sienten naturales
+      </p>
+
+      <p class="hero-description">
+        Mi compromiso es brindar una atención cercana y personalizada,
+        pensada para cuidar la salud oral y la estética de cada sonrisa.
+      </p>
+
+      <a href="#sobre-mi"
+         class="hero-cta">
+        Conoce mi enfoque →
+      </a>
+    </div>
+
+  </div>
+
+
+</section>
+
+</header>
+
+<section class="cases-editorial">
+
+<a href="index.html" class="back-home-float">
+  ← Volver al inicio
+</a>
+
+       
+<section id="sobre-mi" class="about-doctor">
+
+  <div class="about-doctor-content">
+
+    <!-- VIDEO -->
+     <div class="video-vertical-wrapper">
+
+                <div class="video-audio-overlay" onclick="activarAudio(this)">
+                    🔊 Tocar para escuchar
+                </div>
+
+                <video autoplay muted loop playsinline>
+                    <source src="videos/Luminous_Video.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+
+            </div>
+
+    <!-- TEXTO -->
+    <div class="about-text">
+
+      <h2>Acompañar cada sonrisa es parte de mi vocación</h2>
+
+      <p>
+        Mi compromiso es brindar una atención cercana y honesta, creando tratamientos 
+        adaptados a cada paciente, con un enfoque en la estética natural, la salud oral 
+        y resultados que generen confianza y tranquilidad
+      </p>
+
+      <ul class="about-values">
+        <li>✓ Trato humano y personalizado</li>
+        <li>✓ Resultados naturales y equilibrados</li>
+        <li>✓ Odontología integral</li>
+        <li>✓ Cercanía y acompañamiento en cada etapa</li>
+      </ul>
+
+      <a href="index.html#citas" class="hero-cta">
+        Agenda tu cita →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<script>
+    function activarAudio(btn) {
+      const video = btn.parentElement.querySelector("video");
+
+      video.muted = false;
+      video.volume = 1;
+      btn.style.display = "none";
+    }
+</script>
+
+<footer class="footer">
+        <p>© 2026 Luminous · Clínica Odontológica</p>
+    </footer>
+</body>
+</html>
