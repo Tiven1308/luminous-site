@@ -993,3 +993,35 @@ h2 {
 }
 
 
+@media (max-width: 768px) {
+
+  .luminous-intro {
+    padding: 50px 16px 60px; /* 🔥 mucho más compacto */
+  }
+
+  .luminous-intro h2 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .luminous-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+
+  .luminous-location {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.4px;
+  }
+
+  .luminous-intro .btn-primary {
+    width: 100%;            /* ✅ CTA claro en móvil */
+    max-width: 280px;
+    padding: 14px 0;
+    font-size: 0.95rem;
+  }
+}
+
+
