@@ -13,12 +13,15 @@ body {
 
 .hero {
   position: relative;
-  min-height: 65vh;
+  min-height: 75vh;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-end;;
   justify-content: center;
   text-align: center;
+   padding-bottom: 80px;
+  
+
 }
 
 
@@ -41,8 +44,8 @@ body {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(20, 15, 10, 0.65),
-    rgba(20, 15, 10, 0.45)
+    rgba(20, 15, 10, 0.45),
+    rgba(20, 15, 10, 0.25)
   );
   z-index: 2;
 }
@@ -67,30 +70,6 @@ body {
   z-index: 1;
 }
 
-
-
-
-
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  max-width: 900px;
-  padding: 20px;
-  color: white;
-}
-
-
-
-.hero-content h1 {
-  color: #ffffff;
-  font-size: 2.1rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-  margin-top: -80px;
-}
-
-
 .hero-content {
   position: relative;
   z-index: 3;
@@ -100,39 +79,31 @@ body {
   text-align: center;
 }
 
-/* TÍTULO */
+
+
+ 
 .hero-content h1 {
-  font-size: 2.1rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  margin-top: -80px; /* mantiene el título arriba, suave */
+  font-size: 1.9rem;   /* antes era grande */
+  max-width: 720px;
+  margin: 0 auto 18px;
 }
 
-/* SUBTÍTULO */
+
 .hero-subtitle {
-  font-size: 1.05rem;
-  color: #eaeaea;
-  opacity: 0.95;
-  margin-bottom: 6px; /* 🔑 pega Armenia abajo */
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
-/* UBICACIÓN */
 .hero-location {
-  font-size: 0.85rem;
-  color: #eaeaea;
-  opacity: 0.8;
-  margin-bottom: 32px; /* aire antes del botón */
-  text-align: center;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
-
-/* BOTÓN */
-.btn-primary {
-  padding: 12px 28px;
+  font-size: 0.8rem;
+  opacity: 0.75;
 }
 
 
+  .btn-primary {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+  }
 
 .hero h1 {
   font-size: 2.0rem;
@@ -163,6 +134,52 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
+
+
+.luminous-intro {
+  background: #ffffff;
+  padding: 40px 20px 100px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.luminous-intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center; 
+}
+
+/* TÍTULO */
+.luminous-intro h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1f2937; /* gris elegante */
+}
+
+/* SUBTÍTULO */
+.luminous-subtitle {
+  font-size: 1.05rem;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* UBICACIÓN */
+.luminous-location {
+  font-size: 0.95rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  color: #c9a24d; /* dorado LUMINOUS */
+  margin-bottom: 32px;
+}
+
+/* BOTÓN */
+.luminous-intro .btn-primary {
+  padding: 14px 32px;
+}
+
 
 .card {
   background: white;
