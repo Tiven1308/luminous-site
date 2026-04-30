@@ -118,22 +118,42 @@
   transform: translateY(-50%) translateX(4px);
 }
 
+/* Estado base: oculto */
+.back-home-mobile {
+  display: none;
+
+  margin: 20px 16px 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: #c9a24d; /* Dorado LUMINOUS */
+  text-decoration: none;
+  text-align: left;
+}
+
+.back-home-mobile:hover {
+  text-decoration: underline;
+}
+
+
+/* =============================
+   COMPORTAMIENTO RESPONSIVE
+============================= */
 
 @media (max-width: 768px) {
-  .back-home-float {
-    position: relative;          /* deja de ser flotante */
-    top: auto;
-    left: auto;
-    transform: none;
 
-    display: inline-block;
-    margin: 24px auto 0;
-
-    padding: 12px 20px;
-    font-size: 0.85rem;
-    box-shadow: none;
+  /* Mostrar link en mobile */
+  .back-home-mobile {
+    display: block;
   }
+
+  /* Ocultar botón flotante en mobile */
+  .back-home-float {
+    display: none;
+  }
+
 }
+
 
 
 
