@@ -112,41 +112,11 @@
   z-index: 999;
 }
 
-/* Hover elegante */
-.back-home-float:hover {
-  background: #b8923e;
-  transform: translateY(-50%) translateX(4px);
-}
-
-/* Estado base: oculto */
-.back-home-mobile {
-  display: none;
-
-  margin: 20px 16px 30px;
-  font-size: 0.85rem;
-  font-weight: 500;
-
-  color: #c9a24d; /* Dorado LUMINOUS */
-  text-decoration: none;
-  text-align: left;
-}
-
-.back-home-mobile:hover {
-  text-decoration: underline;
-}
-
-
 /* =============================
    COMPORTAMIENTO RESPONSIVE
 ============================= */
 
 @media (max-width: 768px) {
-
-  /* Mostrar link en mobile */
-  .back-home-mobile {
-    display: block;
-  }
-
   /* Ocultar botón flotante en mobile */
   .back-home-float {
     display: none;
