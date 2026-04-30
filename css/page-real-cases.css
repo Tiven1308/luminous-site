@@ -118,11 +118,23 @@
   transform: translateY(-50%) translateX(4px);
 }
 
+
 @media (max-width: 768px) {
   .back-home-float {
-    display: none;
+    position: relative;          /* deja de ser flotante */
+    top: auto;
+    left: auto;
+    transform: none;
+
+    display: inline-block;
+    margin: 24px auto 0;
+
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    box-shadow: none;
   }
 }
+
 
 
 
